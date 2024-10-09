@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="com.spring.primitivetype.Student" id="student1" scope="prototype">
+        <property name="id" value="237"/>
+        <property name="name" value="Sai Chandu"/>
+        <property name="marks" value="87.98"/>
+    </bean>
+
+    <bean id="student2" class="com.spring.primitivetype.Student">
+
+    </bean>
+
+    <!-- By using Value Tag
+    <bean class="com.spring.primitivetype.Employee" name="student2">
+        <property name="id"><value>234</value></property>
+        <property name="name"><value>Vamsi</value></property>
+        <property name="marks"><value>89.79</value></property>
+    </bean>
+    -->
+
+    <!-- By using Value Attribute
+    <bean class="com.spring.primitivetype.Employee" name="student2">
+        <property name="id" value="233"/>
+        <property name="name" value="Vishnu"/>
+        <property name="marks" value="78.98"/>
+    </bean>
+    -->
+
+    <!--<bean class="com.spring.primitivetype.Employee" name="student3" p:id="259" p:name="Jenny" p:marks="99.87"/>-->
+
+</beans>

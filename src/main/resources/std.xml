@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+           http://www.springframework.org/schema/context
+           https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--Stand Alone List-->
+    <util:list list-class="java.util.ArrayList" id="x">
+        <value>BMW</value>
+        <value>Audi</value>
+        <value>Swift</value>
+        <value>Nano</value>
+    </util:list>
+
+    <util:set set-class="java.util.LinkedHashSet" id="y">
+        <value>Jsp@gamil</value>
+        <value>hsj@hamil</value>
+        <value>hjska@gajsj</value>
+    </util:set>
+
+    <util:map map-class="java.util.LinkedHashMap" id="z">
+        <entry key="M" value="Sai Chandu"/>
+        <entry key="Ms" value="Naidu"/>
+        <entry key="Sathi" value="Pandu"/>
+    </util:map>
+
+    <util:properties id="i">
+        <prop key="driver_class name">com.mysql.cj.jdbc.Driver</prop>
+        <prop key="url">jdbc:mysql://localhost:3306/lol</prop>
+        <prop key="username">root</prop>
+        <prop key="password">Saichandu@090</prop>
+    </util:properties>
+
+    <bean class="com.jsp.standalonecollection.Employee" name="emp1">
+        <property name="vehicle" ref="x"/>
+        <property name="email" ref="y"/>
+        <property name="name" ref="z"/>
+        <property name="dbProp" ref="i"/>
+    </bean>
+</beans>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean name="emp1" class="com.spring.collectiontype.Employee">
+        <property name="vehicle">
+            <list>
+                <value>BMW</value>
+                <value>Audi</value>
+                <value>Suzuki</value>
+                <value>BMTC</value>
+                <value>BMW</value>
+                <null></null>
+            </list>
+        </property>
+        <property name="email">
+            <set>
+                <value>marrisaichandu143@gmail.com</value>
+                <value>abc@gmail.com</value>
+                <value>bndj@gmail.com</value>
+                <value>jajdhh@gmail.com</value>
+                <value>jajlsgsfs@gmail.com</value>
+                <null></null>
+            </set>
+        </property>
+
+        <property name="name">
+            <map>
+                <entry key="M" value="Sai Chandu"/>
+                <entry key="J" value="Seetha"/>
+                <entry key="K" value="Geetha"/>
+                <entry key="O" value="Jenny"/>
+                <entry key="KL" value="Rama"/>
+                <entry key="Marri" value="Laxmana"/>
+            </map>
+        </property>
+    </bean>
+</beans>

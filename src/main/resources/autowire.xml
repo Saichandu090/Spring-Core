@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config/>
+    <bean class="com.autowiring.Certificate" name="cer1">
+        <property name="cName" value="Hibernate"/>
+        <property name="cDuration" value="2.5"/>
+    </bean>
+
+    <bean class="com.autowiring.Certificate" name="cer2">
+        <property name="cName" value="Springs"/>
+        <property name="cDuration" value="4.8"/>
+    </bean>
+
+    <!-- Injecting property based on byType -->
+    <!-- <bean class="com.autowiring.Student" name="s1" autowire="byType"/> -->
+
+    <!-- Injecting property based on byName -->
+    <!-- <bean class="com.autowiring.Student" name="s1" autowire="byName"/> -->
+
+    <!-- Injecting property based on Constructor-->
+    <!-- <bean class="com.autowiring.Student" name="s1" autowire="constructor"/> -->
+
+    <bean class="com.autowiring.Student" id="s1"/>
+
+</beans>
